@@ -1,12 +1,9 @@
 FROM python:3.9-slim-buster
 
-ENV LANG C.UTF-8
+RUN pip3 install --no-cache-dir pandas scikit-learn joblib requests
 
-# Install required packages
-RUN pip3 install --no-cache-dir pandas scikit-learn xgboost lightgbm catboost joblib requests
-
-# Copy data for add-on
-COPY run.sh presence_detector.py /
+COPY run.sh /
+COPY ml_presence_detector.py /
 
 RUN chmod a+x /run.sh
 
