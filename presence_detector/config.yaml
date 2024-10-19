@@ -1,6 +1,6 @@
 name: "ML Presence Detector"
 description: "Machine Learning based presence detector for Home Assistant"
-version: "0.1.0"
+version: "0.2.0"
 slug: "ml_presence_detector"
 init: false
 arch:
@@ -14,6 +14,8 @@ boot: auto
 options:
   sensor_entity: "binary_sensor.presence_sensor_fp2_2e03"
   light_entity: "light.luz_casa_de_banho_light"
+  long_lived_token: ""
 schema:
   sensor_entity: str
   light_entity: str
+  long_lived_token: str
